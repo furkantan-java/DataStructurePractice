@@ -1,5 +1,8 @@
 package dataStructures;
 
+import java.util.Collection;
+import java.util.Collections;
+
 public class ListOfCustomClass {
 
     public static void main(String[] args) {
@@ -8,6 +11,6 @@ public class ListOfCustomClass {
 //        101	Neena	    Kochhar	    NKOCHHAR	17000
 //        102	Lex	        De Haan	    LDEHAAN	    17000
 //        103	Alexander	Hunold	    AHUNOLD	    9000
-
+        Collections.sort();
     }
 }
