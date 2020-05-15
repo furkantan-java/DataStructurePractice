@@ -22,7 +22,7 @@ public class ListOfMap {
 
         System.out.println("e1 = " + e1);
 
-        List<String> employee2 = Files.readAllLines(Paths.get("employee2"));
+        List<String> employee2 = Files.readAllLines(Paths.get("dataFiles","employeeData","employee2"));
         System.out.println("employee2 = " + employee2);
         //HashMap does not keep insertion order
         //Map<String,String>e2 = new HashMap<>();
@@ -37,14 +37,14 @@ public class ListOfMap {
             System.out.println("e2 = " + e2);
         }
 
-        List<String> employee3 = Files.readAllLines(Paths.get("employee3"));
+        List<String> employee3 = Files.readAllLines(Paths.get("dataFiles","employeeData","employee3"));
         Map<String, String> e3 = new LinkedHashMap<>();
         for (String each : employee3) {
             String[] arr = each.split("=");
             e3.put(arr[0], arr[1]);
         }
 
-        List<String> employee4 = Files.readAllLines(Paths.get("employee4"));
+        List<String> employee4 = Files.readAllLines(Paths.get("dataFiles","employeeData","employee4"));
         Map<String, String> e4 = new LinkedHashMap<>();
         for (String each : employee4) {
             String[] arr = each.split("=");

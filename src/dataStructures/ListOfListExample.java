@@ -12,12 +12,12 @@ public class ListOfListExample {
     public static void main(String[] args) throws IOException {
         List< List<String> > list = new ArrayList<>();
 
-        List<String>groceryList = Files.readAllLines(Paths.get("grocery"));
+        List<String>groceryList = Files.readAllLines(Paths.get("dataFiles","grocery"));
         System.out.println("groceryList = " + groceryList);
-        List<String>carList = Files.readAllLines(Paths.get("cars"));
-        List<String>countryList = Files.readAllLines(Paths.get("countries"));
-        List<String>emailList = Files.readAllLines(Paths.get("emails"));
-        List<String>SSNnumbersList = Files.readAllLines(Paths.get("SSNnumbers"));
+        List<String>carList = Files.readAllLines(Paths.get("dataFiles","cars"));
+        List<String>countryList = Files.readAllLines(Paths.get("dataFiles","countries"));
+        List<String>emailList = Files.readAllLines(Paths.get("dataFiles","emails"));
+        List<String>SSNnumbersList = Files.readAllLines(Paths.get("dataFiles","SSNnumbers"));
 
 //        list.add(groceryList);
 //        list.add(carList);
