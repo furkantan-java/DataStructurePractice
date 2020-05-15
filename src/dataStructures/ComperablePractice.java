@@ -1,9 +1,6 @@
 package dataStructures;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.List;
+import java.util.*;
 
 public class ComperablePractice {
 
@@ -39,13 +36,20 @@ public class ComperablePractice {
         List<Person> people = new ArrayList<>();
         people.add(new Person("Judith", 30));
         people.add(new Person("Carl", 20));
-        people.add(new Person("Alex", 18));
-        people.add(new Person("Alex", 50));
+        people.add(new Person("Alex", 60));
+        people.add(new Person("Alex", 60));
         people.add(new Person("Ellie", 25));
 
         System.out.println("BEFORE SORTING");
         System.out.println("people = " + people);
-        Collections.sort(people);
+        //Comparator<Person>nameComparator = new PersonNameComparator();
+        //Collections.sort(people);
+        //Collections.sort(people,nameComparator);
+
+        Comparator<Person>nameComparator = Comparator.comparing(person -> person.name);
+        Comparator<Person>ageComparator = Comparator.comparing(person -> person.age);
+        //Collections.sort(people,ageComparator.reversed());
+        Collections.sort(people,nameComparator.thenComparing(ageComparator));
         System.out.println("AFTER SORTING");
         System.out.println("people = " + people);
 
