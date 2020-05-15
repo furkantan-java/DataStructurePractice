@@ -1,6 +1,6 @@
 package dataStructures;
 
-public class Employee {
+public class Employee implements Comparable<Employee> {
 
     //This is my custom class
     int employeeID;
@@ -23,5 +23,16 @@ public class Employee {
                 ", last_name='" + last_name + '\'' +
                 ", salary=" + salary +
                 '}';
+    }
+
+    @Override
+    public int compareTo(Employee o) {
+        if (this.first_name.charAt(0) == o.first_name.charAt(0)) {
+            return 0;
+        } else if (this.first_name.charAt(0) > o.first_name.charAt(0)) {
+            return 1;
+        } else {
+            return -1;
+        }
     }
 }
