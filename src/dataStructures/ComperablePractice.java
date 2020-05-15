@@ -36,6 +36,13 @@ public class ComperablePractice {
         System.out.println("employeeList = " + employeeList);
 
 
+        List<Person> people = new ArrayList<>();
+        people.add(new Person("Judith", 30));
+        people.add(new Person("Carl", 20));
+        people.add(new Person("Marry", 18));
+        people.add(new Person("Alex", 50));
+        people.add(new Person("Ellie", 25));
+
     }
 
 }

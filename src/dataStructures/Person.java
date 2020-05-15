@@ -1,6 +1,6 @@
 package dataStructures;
 
-public class Person {
+public class Person implements Comparable<Person>{
 
     String name;
     int age;
@@ -19,4 +19,14 @@ public class Person {
                 '}';
     }
 
+    @Override
+    public int compareTo(Person o) {
+        if (this.name.charAt(0) == o.name.charAt(0)) {
+            return 0;
+        } else if (this.name.charAt(0) > o.name.charAt(0)) {
+            return 1;
+        } else {
+            return -1;
+        }
+    }
 }
